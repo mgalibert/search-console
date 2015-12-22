@@ -17,7 +17,7 @@ Make sure you have a `client_secret.json` in your folder.
 
 #### Dependencies
 
-Run
+Run `make install`
 
 ### Run
 
