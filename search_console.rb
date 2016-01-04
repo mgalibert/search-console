@@ -73,14 +73,14 @@ def mark_errors_as_fixed
   WEBSITES.each do |website|
 
     ERROR_TYPES.each do |error_type|
-      
+
       PLATFORMS.each do |platform|
-        
+
         puts "#{website} | #{error_type} | #{platform}"
         response = service.list_errors_samples(website, error_type, platform)
 
         if !response.url_crawl_error_sample.nil?
-          begin 
+          begin
             service.batch do |service|
               puts "Fixing #{response.url_crawl_error_sample.count} urls"
 
